@@ -18,7 +18,7 @@ const DashboardLayout = ({
   };
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen ">
       {/* Sidebar */}
       <div
         className={` bg-slate-700 relative w-60 transition-transform duration-300 ${
@@ -53,9 +53,9 @@ const DashboardLayout = ({
       </div>
 
       {/* Main Content */}
-      <div className={`flex flex-col flex-1`}>
+      <div className={`flex flex-col flex-1 `}>
         {/* Header */}
-        <header className="bg-gray-800 text-white py-4 px-6 flex justify-between items-center">
+        <header className="bg-gray-800 text-white py-4 px-6 flex justify-between items-center z-50">
           <div className="flex items-center gap-2">
             {!isSidebarOpen && (
               <span
@@ -74,7 +74,7 @@ const DashboardLayout = ({
         </header>
 
         {/* Main Content */}
-        <main className="flex-1 p-6">{children}</main>
+        <main className="flex-1 p-6 overflow-y-auto">{children}</main>
 
         {/* Footer
         <footer className="bg-gray-800 text-white py-4 px-6 flex justify-between items-center">
