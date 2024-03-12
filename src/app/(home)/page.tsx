@@ -1,10 +1,14 @@
 import React from "react";
+import MaxWidthWrapper from "./components/MaxWidthWrapper";
+import HeroHeader from "./components/landing/Hero";
+import ContactForm from "./components/landing/contact-form";
 
 const Home = () => {
   return (
-    <div className="h-screen">
-     home
-    </div>
+    <MaxWidthWrapper>
+      <HeroHeader />
+      <ContactForm/>
+    </MaxWidthWrapper>
   );
 };
 

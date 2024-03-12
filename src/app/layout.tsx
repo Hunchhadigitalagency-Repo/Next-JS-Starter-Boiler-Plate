@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "../../redux/provider";
+import { cn } from "@/lib/utils";
+import UIProviders from "./dashboard/components/providers";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,16 +19,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <head>
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
         />
       </head>
-      <body className={inter.className}>
-        {" "}
-        <Providers>{children}</Providers>
+      <body className={cn("relative h-full", inter.className)}>
+        <Providers>
+          <UIProviders>
+            <Toaster />
+            {children}
+          </UIProviders>
+        </Providers>
       </body>
     </html>
   );

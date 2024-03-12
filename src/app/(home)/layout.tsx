@@ -1,7 +1,6 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
-
 export default function HomeLayout({
   children,
 }: Readonly<{
@@ -14,8 +13,10 @@ export default function HomeLayout({
       </head>
       <body>
         <Header />
-        {children}
-        <Footer/>
+        <main className="relative flex flex-col min-h-screen">
+          <div className="flex-grow flex-1">{children}</div>
+        </main>
+        <Footer />
       </body>
     </html>
   );
