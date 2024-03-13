@@ -47,3 +47,5 @@ yarn dev</code></pre>
   <p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
 </body>
 </html>
+
+@all-contributors please add @jakebolam for infrastructure, tests and code
