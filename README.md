@@ -48,4 +48,3 @@ yarn dev</code></pre>
 </body>
 </html>
 
-@all-contributors please add @jakebolam for infrastructure, tests and code
